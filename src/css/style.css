@@ -10,9 +10,14 @@ body {
 	color: #ffffff;
 
 	background-color: #000000;
-	background-image: url("../img/background.jpg");
+	/*background-image: url("../img/background.jpg");*/
 	background-position: top center;
 	background-repeat: no-repeat;
+}
+
+.test {
+	z-index: 200;
+	background-image: url(../img/1.png);
 }
 
 .visually-hidden {
@@ -30,17 +35,59 @@ a {
 	text-decoration: none;
 }
 
+/* Стили шапки */
+
 .main-navigation {
+	/*Позиционирование*/
+
+	/*Блочная модель*/
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+  
+  padding: 0;
+  margin: 0;
+
+	/*Типография*/
 	font-size: 16px;
 	line-height: 20px;
-	color: #ffffff;
+  color: #ffffff;
+  
+  /*Визуализация*/
+  background-color: transparent;
+}
 
-	background-color: #000000;
+.main-header-logo {
+	order: 1;
+	width: 368px;
+	height: 153px;
+}
+
+.main-navigation-wrapper {
+  width: 100%;
+  margin-bottom: 60px;
+
+  background-color: #000000;
+}
+
+.main-navigation-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-navigation {
+  width: 620px;
+} 
+
+.user-navigation {
+  width: 140px;
 }
 
 .site-navigation,
 .user-navigation {
-	list-style: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .site-navigation a,
@@ -55,20 +102,40 @@ a {
 	background-color: #242424;
 }
 
-.features {
-	text-align: center;
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-.fetures-list {
+.features {
+
+}
+
+.features-list {
+	display: flex;
+	justify-content: space-between;	
+	padding: 0;
+	margin: 0;
+	
 	list-style: none;
 }
 
-.fetures-list h3 {
+.features-list h3 {
 	font-size: 30px;
 	line-height: 42px;
 }
 
+.features-item {
+	width: 300px;
+	text-align: center;
+}
+
 .column {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 80px;
+	
 	color: #000000;
 
 	background-color: #ffffff;
@@ -85,8 +152,31 @@ a {
 	text-transform: none;
 }
 
+.news {
+	width: 380px;
+}
+
+.news h2,
+.gallery h2 {
+	padding: 0;
+	margin: 0;
+}
+
+
 .news-list {
+	padding: 0;
+	margin: 0;
+
 	list-style: none;
+}
+
+.gallery {
+	width: 300px;
+}
+
+figure {
+	padding: 0;
+	margin: 0;
 }
 
 .appointment-item input {
